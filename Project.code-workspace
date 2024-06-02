@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../notebooks"
+		},
+		{
+			"path": "../../mlops-zoomcamp"
+		},
+		{
+			"path": "../../Complete-MLOps-BootCamp"
+		}
+	],
+	"settings": {}
+}
