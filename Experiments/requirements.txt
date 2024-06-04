@@ -1,0 +1,11 @@
+mlflow
+ipykernel
+opencv-python
+torch
+torchvision
+git+https://github.com/facebookresearch/detectron2.git
+git+https://github.com/nhatminh297/glass-text-spotting.git
+shapely
+paddlepaddle
+paddleocr
+nbformat
