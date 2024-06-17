@@ -12,6 +12,8 @@ def iou(boxA, boxB):
     return inter_area / union_area
 
 def levenshtein_distance(s1, s2):
+    s1 = str(s1)
+    s2 = str(s2)
     if len(s1) < len(s2):
         return levenshtein_distance(s2, s1)
     if len(s2) == 0:
@@ -28,9 +30,12 @@ def levenshtein_distance(s1, s2):
     return previous_row[-1]
 
 def cer(s1, s2):
+    s2 = str(s2)
     return levenshtein_distance(s1, s2) / len(s2)
 
 def wer(s1, s2):
+    s1 = str(s1)
+    s2 = str(s2)
     s1_words = s1.split()
     s2_words = s2.split()
     return levenshtein_distance(s1_words, s2_words) / len(s2_words)
@@ -92,7 +97,7 @@ def precision_recall_f1_text(predictions, ground_truths, distance_threshold=0):
 
     return precision, recall, f1_score
 
-def avg_metric(GTs, Preds):
+def avg_metrics(GTs, Preds):
     # Initialize cumulative metric sums
     avg_iou_precision = avg_iou_recall = avg_iou_f1 = 0
     avg_text_precision = avg_text_recall = avg_text_f1 = 0
@@ -133,9 +138,11 @@ def avg_metric(GTs, Preds):
         avg_cer = avg_wer = float('nan')  # Handle zero text count case
     
     return (avg_cer, avg_wer,
+            
             avg_iou_precision / t if t > 0 else float('nan'),
             avg_iou_recall / t if t > 0 else float('nan'),
             avg_iou_f1 / t if t > 0 else float('nan'),
+            
             avg_text_precision / t if t > 0 else float('nan'),
             avg_text_recall / t if t > 0 else float('nan'),
             avg_text_f1 / t if t > 0 else float('nan'))

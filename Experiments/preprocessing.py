@@ -11,3 +11,4 @@ def superResolution(image):
 
 def color_normalize(image):
     return image
+
