@@ -1,0 +1,327 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 3%;
+    background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+    color: #333;
+    /* Default text color */
+}
+
+/* Container */
+.container {
+    text-align: center;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Headings */
+h2 {
+    font-size: 2.5em;
+    /* Larger font size */
+    margin-bottom: 15px;
+    color: #007bff;
+    /* Primary color for headings */
+    text-transform: uppercase;
+    /* Uppercase text */
+    letter-spacing: 2px;
+    /* Spacing between letters */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+h2::after {
+    content: '';
+    width: 50%;
+    height: 3px;
+    background: #00d4ff;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    border-radius: 10px;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 20px;
+    color: #666;
+    /* Neutral color for paragraphs */
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.url-button,
+.extract-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.url-button {
+    background-color: #e7eef4;
+    color: #007bff;
+    /* Matching button text color with primary color */
+}
+
+.url-button:hover,
+.upload-button:hover,
+.extract-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    /* Slight lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.url-button:hover {
+    background-color: #c5d2dd;
+}
+
+/* Input */
+.url-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    transition: border-color 0.3s;
+}
+
+.url-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Image Display Area */
+.image-display-area {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+    gap: 10px;
+    /* Add gap between images */
+}
+
+.image-display-area img {
+    width: 100%;
+    max-width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+.image-display-area img:hover {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.image-display-area .column {
+    flex: 1;
+    max-width: 45%;
+    /* Adjust max width to fit gap */
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Wrapper */
+.wrapper {
+    width: 50%;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.wrapper header {
+    color: #007bff;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Form */
+.wrapper form {
+    height: 167px;
+    display: flex;
+    cursor: pointer;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px dashed #007bff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.wrapper form:hover {
+    background-color: #f0f4ff;
+    border-color: #00d4ff;
+}
+
+form :where(i, p) {
+    color: #007bff;
+}
+
+form i {
+    font-size: 50px;
+}
+
+form p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* Section Rows */
+section .row {
+    margin-bottom: 10px;
+    background: #E9F0FF;
+    list-style: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .row i {
+    color: #007bff;
+    font-size: 30px;
+}
+
+section .details span {
+    font-size: 14px;
+}
+
+/* Progress Area */
+.progress-area .row .content {
+    width: 100%;
+    margin-left: 15px;
+}
+
+.progress-area .details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    justify-content: space-between;
+}
+
+.progress-area .content .progress-bar {
+    height: 6px;
+    width: 100%;
+    margin-bottom: 4px;
+    background: #fff;
+    border-radius: 30px;
+}
+
+.content .progress-bar .progress {
+    height: 100%;
+    width: 0%;
+    background: #007bff;
+    border-radius: inherit;
+}
+
+/* Uploaded Area */
+.uploaded-area {
+    max-height: 232px;
+    overflow-y: scroll;
+}
+
+.uploaded-area.onprogress {
+    max-height: 150px;
+}
+
+.uploaded-area::-webkit-scrollbar {
+    width: 0px;
+}
+
+.uploaded-area .row .content {
+    display: flex;
+    align-items: center;
+}
+
+.uploaded-area .row .details {
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+}
+
+.uploaded-area .row .details .size {
+    color: #404040;
+    font-size: 11px;
+}
+
+.uploaded-area i.fa-check {
+    font-size: 16px;
+}
+
+/* Bounding Box */
+.bounding-box {
+    width: 100%;
+}
+
+/* Models OCR Dropdown */
+#models_OCR {
+    width: 10%;
+    font-size: 90%;
+    padding: 3px;
+    background-color: #fff;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    color: #007bff;
+    /* Dropdown text color */
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+#models_OCR:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Text Display Area */
+.text-display-area {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    margin: 3%;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    border-radius: 10px;
+    border: #6990F2 solid;
+    visibility: hidden;
+    padding: 10px;
+    transition: visibility 0.3s, opacity 0.3s;
+    opacity: 0;
+}
+
+.text-display-area.visible {
+    visibility: visible;
+    opacity: 1;
+}

@@ -161,9 +161,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-Experiments/data/demo_data/
-Experiments/data/train_data/
-Experiments/data/test_data/
+Experiments/data/
 Experiments/pretrained_models/
 Experiments/mlruns/
 App/src/glass-text-spotting/
